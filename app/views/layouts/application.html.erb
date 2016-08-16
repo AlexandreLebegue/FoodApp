@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FoodApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <strong>
+    <center>
+<div id="entete">
+<ul id="navigation">
+  <li> | Accueil | </li>
+  <li>Bon Resto | </li>
+  <li>Bof Resto | </li>
+  <li>Contactez-nous |</li>
+</ul>
+</div>
+</strong>
+  <body>
+    <center><div id="centre">
+    <%= yield %></center>
+  </div>
+  </body>
+</html>

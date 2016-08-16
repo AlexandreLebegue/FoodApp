@@ -1,0 +1,12 @@
+<h1>Liste Restaurants</h1>
+
+<% @restaurants.each do |restaurant| %>
+  <p><a href= "/restaurants/<%= restaurant.id%>" </a>
+  <%= restaurant.titre %></a>
+  <%= restaurant.categorie %> </p>
+<% end %>
+
+<%= form_tag "/restaurants", method: "post" do %>
+  <input type="text" name="titre" />
+  <input type="submit" value="Ajouter le restaurant" />
+<% end %>

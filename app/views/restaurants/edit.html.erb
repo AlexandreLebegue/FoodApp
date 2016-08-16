@@ -1,0 +1,27 @@
+<h1>Edition de <%= @resto.titre %></h1>
+<%= form_tag "/restaurants/#{@resto.id}/edit", method: "patch" do %>
+  <input type="text" name="titre" />
+  <input type="submit" value="Modifier titre" />
+<% end %>
+<%= form_tag "/restaurants/#{@resto.id}/edit", method: "patch" do %>
+  <select name="categorie" id="pays" />
+         <option value="francais">francais</option>
+         <option value="espagnol">espagnol</option>
+         <option value="italien">italien</option>
+         <option value="canadien">canadien</option>
+         <option value="chinois">chinois</option>
+         <option value="japonais">japonais</option>
+         <option value="coréen">coréen</option>
+  </select>
+  <input type="submit" value="Ajouter/Modifier categorie" />
+<% end %>
+<%= form_tag "/restaurants/#{@resto.id}/edit", method: "patch" do %>
+  <textarea name="ameliorer" id="ameliorer" rows="5" cols="25">
+    <%= @resto.description %>
+  </textarea>
+  <input type="submit" value="Ajouter/Modifier description" />
+<% end %>
+<%= form_tag "/restaurants/#{@resto.id}/edit", method: "delete" do %>
+  <input type="submit" value="Supprimer le restaurant" />
+<% end %>
+<p><a href="/restaurants">Retourner à l’accueil</a></p>
